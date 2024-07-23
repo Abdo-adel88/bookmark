@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="position-relative">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <main class="position-relative py-5 vh-100">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+      <h1 class="py-2 position-relative">Bookmarker</h1>
+      <div class="bookmark w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+        <h2>
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="site-name w-100 d-flex flex-column justify-content-center">
+          <label for="bookmarkName" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name</label>
+          <input type="text" placeholder="Bookmark Name" class="form-control" id="bookmarkName" />
+          <div class="alert-nametrue d-none alert alert-success">
+            <p class="fs-4 fw-bolder text-success text-opacity-75">The name is correct</p>
+
+          </div>
+          <div class="alert-namefalse d-none alert alert-danger">
+            <p class="fs-4 fw-bolder text-danger text-opacity-75">Please enter a word with 3 additional letters</p>
+          </div>
+        </div>
+        <div class="site-url w-100 d-flex flex-column justify-content-center">
+          <label for="bookmarkName" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-link pe-2"></i>
+            Site URL</label>
+          <input type="text" placeholder="Website Url" class="form-control" id="bookmarkUrl" />
+          <div class="alert-nametrue d-none alert alert-success">
+            <p class="fs-4 fw-bolder text-success text-opacity-75">The name is correct</p>
+
+          </div>
+          <div class="alert-namefalse d-none alert alert-danger">
+            <p class="fs-4 fw-bolder text-danger text-opacity-75">Please enter a word with 3 additional letters</p>
+          </div>
+        </div>
+        <button onclick="addProduct()" class="d-block btn btn-submit px-5 text-center " id="submitBtn">
+          Submit
+        </button>
+        <button onclick="upDateProduct() " class="d-none btn btn-warning btn-submitt px-5 text-center " id="updatebtn">
+          Update
+        </button>
+      </div>
+      <table class="table mt-4 text-center bg-light">
+        <thead>
+          <tr>
+            <th class="text-capitalize">index</th>
+            <th class="text-capitalize">Website Name</th>
+            <th class="text-capitalize">Update</th>
+            <th class="text-capitalize">Visit</th>
+            <th class="text-capitalize">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableContent"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <section id="alert"
+    class=" d-none position-absolute top-0 start-0 end-0 bottom-0 d-flex align-items-center justify-content-center vh-100 bg-black bg-opacity-50">
+    <div class="container ">
+      <div class="row align-items-center justify-content-center">
+        <div class="alert-boxx  bg-white d-flex flex-column ">
+          <div class="d-flex align-items-center justify-content-between">
+
+            <div class="d-flex mt-2 ">
+              <div class="circl ms-2"></div>
+              <div class="circl-1 ms-2"></div>
+              <div class="circl-2 ms-2"></div>
+            </div>
+            <div class="mt-2"><button onclick="deleteProductt()" class="border-0 bg-white"><i
+                  class="fa-solid fa-xmark fs-3"></i></button></div>
+          </div>
+
+          <h2 class="h4 ms-2 mt-4">Site Name or Url is not valid, Please follow the rules below :</h2>
+          <h5 class="mt-5 pb-2"><i class="fa-regular fa-circle-right text-danger mx-2 fs-5"></i>Site name must contain
+            at least 3 characters</h5>
+          <h5><i class="fa-regular fa-circle-right text-danger mx-2 fs-5"></i>Site URL must be a valid
+            one</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
